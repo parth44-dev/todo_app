@@ -1,38 +1,184 @@
-.App {
-  text-align: center;
-}
+/* Login and SignUp Page css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  width: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-image: linear-gradient(to right, rgb(132, 198, 224), white);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  border: 2px solid blue;
+}
+
+.form-toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-toggle button {
+  width: 50%;
+  padding: 10px;
+  background-color: #f3f3f3;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 10px 10px 0 0;
+}
+
+.form-toggle .active {
+  background-color: #033452;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form {
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form h2 {
+  margin-bottom: 20px;
+}
+
+.form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form button {
+  padding: 10px;
+  background-color: #033452;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form a {
+  color: #007bff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.form p {
+  text-align: center;
+}
+
+/* Dashboard Page CSS */
+
+.dash-container {
+  height: fit-content;
+  width: 50vw;
+  background-color: white;
+  border: 2px solid blue;
+  margin-bottom: 10px;
+}
+
+.header_div {
+  display: flex;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 2.5rem;
+  font-style: italic;
+  border-bottom: 2px solid blue;
+  padding: 15px;
+}
+
+.task-form {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  font-weight: 600;
+  font-style: italic;
+  border-bottom: 2px solid blue;
+  ;
+}
+
+.task-form input {
+  padding: 2px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 200px;
+  border: 1px solid black;
+}
+
+.task-form input:focus {
+  border-radius: 10px;
+  border: 1.5px solid blue;
+  outline: none;
+}
+
+.task-form button {
+  width: 100px;
+  padding: 2px;
+  font-weight: 600;
+  font-style: italic;
+  background-color: #cbdaeb;
+  outline: none;
+  border: 1px solid black;
+}
+
+.task-form button:hover {
+  cursor: pointer;
+  background-color: #2583e9;
+  color: white;
+  border-radius: 10px;
+}
+
+.task-view {
+  padding: 10px;
+  display: flex;
+  width: 100%;
+}
+
+.task-item {
+  display: flex;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid blue;
+  border-radius: 4px;
+  width: 47vw;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.task-actions button {
+  width: 100px;
+  padding: 2px;
+  font-weight: 600;
+  font-style: italic;
+  background-color: #cbdaeb;
+  outline: none;
+  border: 1px solid black;
+}
+
+.task-actions button:hover {
+  cursor: pointer;
+  background-color: #2583e9;
+  color: white;
+  border-radius: 10px;
 }
