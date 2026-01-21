@@ -1,8 +1,13 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const DashboardPage = () => {
     const [task, setTask] = useState("");
     const [tasks, setTasks] = useState([]);
+
+    const location = useLocation();
+    const loginData = location.state;
+
 
     const handelSubmit = (event) => {
         event.preventDefault();
@@ -17,6 +22,9 @@ const DashboardPage = () => {
         setTasks(NewTaskList); 
     };
     return (
+        <>
+        <p>Email:{loginData?.email}</p>
+        <p>Password:{loginData?.password}</p>
         <div className="dash-container">
             <div className="header_div">
                 <span>To-Do List</span>
@@ -42,6 +50,7 @@ const DashboardPage = () => {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 export default DashboardPage;

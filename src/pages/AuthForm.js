@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AuthForm = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -7,6 +8,8 @@ const AuthForm = () => {
     password: "",
     confirmPassword: ""
   });
+
+  const nav = useNavigate();
 
   const handleChange = (e) => {
     setFormData({
@@ -23,6 +26,8 @@ const AuthForm = () => {
         email: formData.email,
         password: formData.password
       });
+
+      nav("/Dashboard",{state:formData})
      
     } else {
       console.log("Signup data:", {
