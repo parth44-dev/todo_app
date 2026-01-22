@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const AuthForm = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -35,6 +35,8 @@ const AuthForm = () => {
         password: formData.password,
         confirmPassword: formData.confirmPassword
       });
+      alert("Registration Successfull:-");
+      nav('/')
     }
   };
 
